@@ -24,10 +24,16 @@
 					<? } ?>
 					<? if (visit && visit.get("display")) { ?>
 						<th class="visit"><?= __("Active Visit") ?>: </th>
-						<td><span class="visit"><?= visit.get("display") ?> <button id="endVisit"><?= __("End Visit") ?></button><img class="spinner" src="<?= openhmis.url.openmrs ?>images/loading.gif" style="visibility: hidden;"/></span><span class="removeMsg" style="display: none"><?= __("Visit ended") ?></span></td>
+						<td><span class="visit"><?= visit.get("display") ?></span></td>
 					<? } ?>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 </script>
+<!-- 
+					<? if (visit && visit.get("display")) { ?>
+						<th class="visit"><?= __("Active Visit") ?>: </th>
+						<td><span class="visit"><?= visit.get("display") ?> <button id="endVisit"><?= __("End Visit") ?></button><img class="spinner" src="<?= openhmis.url.openmrs ?>images/loading.gif" style="visibility: hidden;"/></span><span class="removeMsg" style="display: none"><?= __("Visit ended") ?></span></td>
+					<? } ?>
+ -->

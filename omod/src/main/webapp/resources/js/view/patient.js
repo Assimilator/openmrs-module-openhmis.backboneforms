@@ -38,8 +38,8 @@ define(
 			},
 			
 			events: {
-				'click .editBillPatient': 'editPatient',
-				'click #endVisit': 'endVisit'
+				'click .editBillPatient': 'editPatient'//,
+				//'click #endVisit': 'endVisit'
 			},
 			
 			takeRawPatient: function(index, data) {
