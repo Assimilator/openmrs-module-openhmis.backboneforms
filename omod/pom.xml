@@ -259,7 +259,8 @@
               </executions>        
               <configuration>
                   <jswarn>false</jswarn>
-                  <nosuffix>true</nosuffix>
+                  <nosuffix>false</nosuffix>
+                  <force>true</force>
                   <excludes>
                       <exclude>**/*.min.js</exclude>
                   </excludes>
