@@ -29,7 +29,7 @@ define(
 		openhmis.PaginateView = Backbone.View.extend({
 			tmplFile: openhmis.url.backboneBase + "template/paginate.html",
 			tmplSelector: "#pagination",
-			pageSizes: [ 5, 10, 25, 50, 100 ],
+			pageSizes: [ 5, 10, 25, 50, 100, 1000, 10000 ],
 			initialize: function(options) {
 				_.bindAll(this, "changePageSize", "checkPage");
 				this.options = {

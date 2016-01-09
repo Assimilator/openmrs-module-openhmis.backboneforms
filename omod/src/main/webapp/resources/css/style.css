@@ -42,7 +42,7 @@ form.bbf-form fieldset { border: none; }
 form.bbf-form ul { padding: 0; margin: 0; }
 li.bbf-field, .bbf-list li { list-style: none; position: relative }
 li.bbf-field label { }
-li.bbf-field div.bbf-editor { position: relative; top: -1.3em; margin-left: 170px; }
+li.bbf-field div.bbf-editor { position: relative; top: -1.3em; margin-left: 250px; }
 div.bbf-help, div.bbf-error {
 	position: absolute;
 	display: none;
