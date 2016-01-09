@@ -3,7 +3,7 @@
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>openhmis.backboneforms</artifactId>
-	<version>2.0.0</version>
+	<version>2.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>OpenHMIS Backbone Forms Module</name>
 	<description>Use Backbone-based forms with OpenMRS</description>
@@ -32,7 +32,7 @@
 		<connection>scm:git:git@github.com:OpenHMIS/openmrs-module-openhmis.backboneforms.git</connection>
 		<developerConnection>scm:git:git@github.com:OpenHMIS/openmrs-module-openhmis.backboneforms.git</developerConnection>
 		<url>scm:git:git@github.com:OpenHMIS/openmrs-module-openhmis.backboneforms.git</url>
-	  <tag>v2.0.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<modules>
@@ -95,21 +95,21 @@
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>webservices.rest-omod</artifactId>
-				<version>2.4</version>
+				<version>[2.6,)</version>
 				<scope>provided</scope>
 			</dependency>
 			
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>openhmis.commons-api</artifactId>
-				<version>2.0.0</version>
+				<version>2.1.0-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
 
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>openhmis.commons-omod</artifactId>
-				<version>2.0.0</version>
+				<version>2.1.0-SNAPSHOT</version>
 				<scope>provided</scope>
 			</dependency>
 		</dependencies>

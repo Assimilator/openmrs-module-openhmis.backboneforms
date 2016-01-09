@@ -13,58 +13,37 @@
  */
 package org.openmrs.module.openhmis.backboneforms;
 
-
 import org.apache.commons.logging.Log; 
 import org.apache.commons.logging.LogFactory;
-import org.openmrs.module.ModuleActivator;
+import org.openmrs.module.BaseModuleActivator;
 
 /**
  * This class contains the logic that is run every time this module is either started or stopped.
  */
-public class BackboneFormsActivator implements ModuleActivator {
-	
-	protected Log log = LogFactory.getLog(getClass());
+public class BackboneFormsActivator extends BaseModuleActivator {
+	private static final Log LOG = LogFactory.getLog(BackboneFormsActivator.class);
 		
 	/**
-	 * @see ModuleActivator#willRefreshContext()
+	 * @see BaseModuleActivator#contextRefreshed()
 	 */
-	public void willRefreshContext() {
-		log.info("Refreshing Backbone Forms Module");
-	}
-	
-	/**
-	 * @see ModuleActivator#contextRefreshed()
-	 */
+	@Override
 	public void contextRefreshed() {
-		log.info("Backbone Forms Module refreshed");
+		LOG.info("Backbone Forms Module refreshed");
 	}
 	
 	/**
-	 * @see ModuleActivator#willStart()
+	 * @see BaseModuleActivator#started()
 	 */
-	public void willStart() {
-		log.info("Starting Backbone Forms Module");
-	}
-	
-	/**
-	 * @see ModuleActivator#started()
-	 */
+	@Override
 	public void started() {
-		log.info("Backbone Forms Module started");
+		LOG.info("Backbone Forms Module started");
 	}
-	
+
 	/**
-	 * @see ModuleActivator#willStop()
+	 * @see BaseModuleActivator#stopped()
 	 */
-	public void willStop() {
-		log.info("Stopping Backbone Forms Module");
-	}
-	
-	/**
-	 * @see ModuleActivator#stopped()
-	 */
+	@Override
 	public void stopped() {
-		log.info("Backbone Forms Module stopped");
+		LOG.info("Backbone Forms Module stopped");
 	}
-		
 }

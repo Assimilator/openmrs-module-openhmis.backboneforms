@@ -117,6 +117,7 @@ define(
 			cancel: function() {
 				this.trigger('cancel');
 				$(this.addLinkEl).show();
+				$('.addLink').show();
 				$(this.titleEl).hide();
 				$(this.formEl).hide();
 				$(this.retireVoidPurgeEl).hide();
@@ -133,6 +134,7 @@ define(
 				this.model.fetch({
 					success: function(model, resp) {
 						self.render();
+						$('.addLink').hide();
 						$(self.titleEl).show();
 						self.modelForm = self.prepareModelForm(self.model);
 
@@ -234,7 +236,10 @@ define(
 				if (confirm(__("Are you sure you want to purge this object? It will be permanently removed from the system."))) {
 					var view = this;
 					this.model.purge({
-						success: function(model) { view.cancel(); },
+						success: function(model) {
+							view.cancel(); 
+							view.trigger('destroyItem', view);
+						},
 						error: function(model, resp) { openhmis.error(resp); }
 					});
 				}
@@ -302,7 +307,7 @@ define(
 				_.bindAll(this);
 				this.template = this.getTemplate();
 				this.model.on("sync", this.render);
-				this.model.on('destroy', this.remove);
+				this.model.on('destroyItem', this.remove);
 				this.model.on("change", this.onModelChange);
 				this._enableActions();
 			},
@@ -326,7 +331,7 @@ define(
 				this.trigger('select', this);
 				this.$el.addClass("row_selected");
 			},
-
+			
 			/**
 			 * Focus the item
 			 * @fires focus

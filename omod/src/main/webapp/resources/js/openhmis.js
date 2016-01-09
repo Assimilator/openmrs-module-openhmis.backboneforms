@@ -54,7 +54,6 @@ define(openhmis.url.backboneBase + "js/openhmis",
 					alert(__(o.message + "\n\nPlease specify a rounding item or disable rounding."));
 				}
 				else {
-					console.log("Message: " + o.message + "\n" + "Code: " + o.code + "\n" + "Detail: " + o.detail);
 					var firstLfPos = o.detail.indexOf('\n');
 					if (firstLfPos !== -1)
 						o.detail = o.detail.substring(0, firstLfPos);
